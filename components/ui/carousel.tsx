@@ -21,7 +21,7 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
   
     const xRef = useRef(0);
     const yRef = useRef(0);
-    const frameRef = useRef<number>();
+    const frameRef = useRef<number | null>(null);
   
     useEffect(() => {
       const animate = () => {
@@ -63,7 +63,7 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
       event.currentTarget.style.opacity = "1";
     };
   
-    const { src, title, width, height } = slide;
+    const { src, title } = slide;
   
     return (
       <div className="[perspective:1200px] [transform-style:preserve-3d]">
@@ -98,8 +98,8 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
               }}
               alt={title}
               src={src}
-              width={width}
-              height={height}
+              width={800}
+              height={600} 
               onLoad={imageLoaded}
               loading="eager"
               decoding="sync"
