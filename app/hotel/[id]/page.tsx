@@ -1,10 +1,8 @@
-import HotelGallery from "@/components/component/HotelGallery";
 import PerksWidget from "@/components/component/perksWidget";
 import {MarqueeDemo}  from "@/components/component/testimonials";
 import { HeroVideoDialogDemo } from "@/components/component/videoUi";
 import { CardWithForm } from "@/components/component/bookingCard";
 import { AccordionDemo } from "@/components/component/FAQ";
-import { TextRevealDemo } from "@/components/component/textreveal";
 import { Carousel } from "@/components/ui/carousel";
 const HotelDesc = () => {
   const slides = [
